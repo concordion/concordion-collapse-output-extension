@@ -13,12 +13,11 @@ import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 
 import org.concordion.api.Resource;
-
 import test.concordion.ProcessingResult;
 import test.concordion.TestRig;
 
 public abstract class AbstractCollapseFixture {
-	
+
 	public ProcessingResult processFragment(String fragment) {
 		ProcessingResult result = new TestRig()
 				.withFixture(this)
@@ -27,10 +26,10 @@ public abstract class AbstractCollapseFixture {
 				.processFragment(fragment);
 		return result;
 	}
-	
+
 	public String render(String fragment) throws Exception {
 		ProcessingResult result = processFragment(fragment);
-		
+
 		return prettyPrintXml(result.getOutputFragmentXML());
 	}
 
@@ -44,7 +43,7 @@ public abstract class AbstractCollapseFixture {
 		//initialize StreamResult with File object to save to file
 		StreamResult streamResult = new StreamResult(new StringWriter());
 		transformer.transform(new StreamSource(new StringReader(unformattedXML)), streamResult);
-		
+
 		return streamResult.getWriter().toString();
 	}
 

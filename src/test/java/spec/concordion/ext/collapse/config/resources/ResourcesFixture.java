@@ -15,7 +15,7 @@ public class ResourcesFixture extends AbstractCollapseFixture {
 	public void installExtension() {
 		System.setProperty("concordion.extensions",
 				DummyCollapseExtensionFactory.class.getName());
-		
+
 		DummyCollapseExtensionFactory.setJavascriptOutputDirectory("/myCustomJsDirectory");
 		DummyCollapseExtensionFactory.setCSSOutputDirectory("/myCustomCSSDirectory");
 	}
@@ -23,7 +23,7 @@ public class ResourcesFixture extends AbstractCollapseFixture {
 	public boolean hasJavaScriptResourceLink(ProcessingResult result, String name) {
 		return result.hasJavaScriptDeclaration(name);
 	}
-	
+
 	public boolean hasCSSResourceLink(ProcessingResult result, String name) {
 		return result.hasCSSDeclaration(name);
 	}

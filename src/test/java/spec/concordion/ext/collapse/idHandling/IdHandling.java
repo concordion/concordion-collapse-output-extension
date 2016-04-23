@@ -23,10 +23,10 @@ public class IdHandling extends AbstractCollapseFixture {
 
 	public String renderAndRetriveJavascriptCall(String fragment) throws Exception {
 		ProcessingResult result = processFragment(fragment);
-		
+
 		Nodes nodes = result.getXOMDocument().query("//a");
 		Attribute attribute = ((Element)nodes.get(0)).getAttribute("href");
-		
+
 		return attribute.getValue();
 	}
 

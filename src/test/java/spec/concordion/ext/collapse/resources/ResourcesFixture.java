@@ -20,7 +20,7 @@ public class ResourcesFixture extends AbstractCollapseFixture {
 	public boolean hasJavaScriptResourceLink(ProcessingResult result, String name) {
 		return result.hasJavaScriptDeclaration(name);
 	}
-	
+
 	public boolean hasCSSResourceLink(ProcessingResult result, String name) {
 		return result.hasCSSDeclaration(name);
 	}
