@@ -8,7 +8,6 @@ import org.junit.Before;
 import org.junit.runner.RunWith;
 
 @RunWith(ConcordionRunner.class)
-@ConcordionOptions(declareNamespaces={"ext", "urn:concordion-extensions:2010"})
 @Extensions(CollapseOutputExtension.class)
 public class MarkdownUsage {
     public boolean returnTrue() {

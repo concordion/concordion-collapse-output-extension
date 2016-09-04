@@ -1,4 +1,4 @@
-# Collapse Output Extension Usage
+# Collapse Output Extension Usage with Markdown
 
 This test demonstrates the usage of the collapse output extension when using a Markdown format.
 
@@ -12,14 +12,7 @@ E.g., you can’t use Markdown-style *emphasis* inside an HTML block.`
 
 _(However we may change to a different Markdown 
 parser in future that does allow markdown syntax within HTML)._
-
-When using Markdown format specifications, the additional namespace needs to be declared in the fixture class
- 
-     @RunWith(ConcordionRunner.class)
-     @ConcordionOptions(declareNamespaces={"ext", "urn:concordion-extensions:2010"})
-     @Extensions(CollapseOutputExtension.class)
-     public class ....
-     
+    
 ## [Example](- "")
 
 For example, this Markdown format specification contains inline HTML
