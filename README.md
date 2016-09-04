@@ -14,20 +14,33 @@ The extension is available from [Maven Central](http://search.maven.org/#artifac
 # Usage
 
 1. Add the style class to the element.
-```html
-<div id="id" class="collapsible">This should be collapsible.</div>
-```
-  
+  ```html
+  <div id="id" class="collapsible">This should be collapsible.</div>
+  ```
+
+  Note that if you are using Markdown format specifications, you will need to use inline HTML within the Markdown specification. Any markup inside the inline HTML must use HTML syntax, since Markdown syntax inside the HTML will not be processed.
+
+  ```html
+  ## Example
+
+  The following will be collapsible.
+
+  <div id="id" class="collapsible">
+    This will **not be bold** since Markdown syntax is not supported within HTML. 
+    <p>However, this will be <b>bold</b></p>
+  </div>
+  ```
+
 2. Add the CollapseOutputExtension to your fixture
 
-```code
-@RunWith(ConcordionRunner.class)
-@Extensions(CollapseOutputExtension.class)
-public class Fixture {
+  ```code
+  @RunWith(ConcordionRunner.class)
+  @Extensions(CollapseOutputExtension.class)
+  public class Fixture {
+  
+  }
+  ```
 
-}
-```
-
-A live example can be found [here](http://concordion.github.io/concordion-collapse-output-extension/spec/spec/concordion/ext/collapse/usage/Usage.html)
+Here are examples using [HTML format specifications](http://concordion.github.io/concordion-collapse-output-extension/spec/spec/concordion/ext/collapse/usage/Usage.html) and [Markdown format specifications](http://concordion.github.io/concordion-collapse-output-extension/spec/spec/concordion/ext/collapse/usage/MarkdownUsage.html)
 
 # [Test Output](http://concordion.github.io/concordion-collapse-output-extension/spec/spec/concordion/ext/collapse/Collapse.html)
