@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/concordion/concordion-collapse-output-extension.svg?branch=master)](https://travis-ci.org/concordion/concordion-collapse-output-extension)
+[![Build Status](https://travis-ci.com/concordion/concordion-collapse-output-extension.svg?branch=master)](https://travis-ci.com/concordion/concordion-collapse-output-extension)
 
 This [Concordion](http://www.concordion.org) extension allows to specify that parts of the specification should be collapsible in the result page.
 
